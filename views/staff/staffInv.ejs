@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/styles/main.css">
+<div class="content">
+    <h1>Update Inventory</h1>
+    <form action="/update-inventory" method="POST">
+        <label for="inventoryId">Inventory ID:</label>
+        <input type="number" id="inventoryId" name="inventoryId" required>
+        
+        <label for="itemName">Item Name:</label>
+        <input type="text" id="itemName" name="itemName" required>
+        
+        <label for="invQuantity">Quantity to add:</label>
+        <input type="number" id="invQuantity" name="invQuantity" required>
+        
+        <button type="submit">Update Inventory</button>
+    </form>
+    <a href="/view-inventory" class="btn">View Inventory</a>
+</div>
+<%- include('../partials/footer') %>

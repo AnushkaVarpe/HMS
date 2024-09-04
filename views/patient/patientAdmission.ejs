@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/styles/main.css">
+<div class="content">
+    <h1>Admission Request</h1>
+    <form action="#" method="POST">
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" required>
+        
+        <label for="condition">Medical Condition:</label>
+        <textarea id="condition" name="condition" required></textarea>
+        
+        <label for="admissionDate">Preferred Admission Date:</label>
+        <input type="date" id="admissionDate" name="admissionDate" required>
+        
+        <button type="submit">Request Admission</button>
+    </form>
+</div>
+<%- include('../partials/footer') %>

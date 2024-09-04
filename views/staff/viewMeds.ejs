@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/styles/main.css">
+<div class="content">
+    <h1>View Medicines</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Stock</th>
+                <th>Expiry</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% medicines.forEach(function(medicine) { %>
+                <tr>
+                    <td><%= medicine.id %></td>
+                    <td><%= medicine.name %></td>
+                    <td><%= medicine.stock %></td>
+                    <td><%= new Date(medicine.expiry).toDateString() %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>
+<%- include('../partials/footer') %>

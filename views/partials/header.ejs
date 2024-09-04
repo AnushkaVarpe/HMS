@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>HMS</title>
+</head>
+<body>
+  <div class="navbar-wrapper">
+    <ul class="nav">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <form>
+          <select onchange="location = this.value;">
+            <option selected disabled>Services</option>
+            <option value="/patient/login">Patient Login</option>
+            <option value="/patient/register">Patient Register</option>
+            <option value="/staff/login">Staff Login</option>
+            <option value="/staff/register">Staff Register</option>
+            <option value="/admin/login">Admin Login</option>
+          </select>
+        </form>
+      </li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/styles/main.css">
+<div class="content">
+    <h1>Update Bed Availability</h1>
+    <form action="#" method="POST">
+        <label for="bedStatus">Bed Status:</label>
+        <select id="bedStatus" name="bedStatus">
+            <option value="available">Available</option>
+            <option value="occupied">Occupied</option>
+        </select>
+        <label for="bedNumber">Bed Number:</label>
+        <input type="text" id="bedNumber" name="bedNumber" required>
+        <button type="submit">Update</button>
+    </form>
+</div>
+<%- include('../partials/footer') %>

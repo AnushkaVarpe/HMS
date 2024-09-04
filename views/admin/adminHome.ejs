@@ -1,0 +1,53 @@
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/styles/main.css">
+<div class="content">
+    <h1>Admin Dashboard</h1>
+
+    <h2>Medicines Data</h2>
+    <% medicinesData.forEach(function(hospital) { %>
+        <h3><%= hospital.hospital %></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Stock</th>
+                    <th>Expiry</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% hospital.data.forEach(function(medicine) { %>
+                    <tr>
+                        <td><%= medicine.id %></td>
+                        <td><%= medicine.name %></td>
+                        <td><%= medicine.stock %></td>
+                        <td><%= medicine.expiry %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% }) %>
+
+    <h2>Inventory Data</h2>
+    <% inventoryData.forEach(function(hospital) { %>
+        <h3><%= hospital.hospital %></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Item Name</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% hospital.data.forEach(function(item) { %>
+                    <tr>
+                        <td><%= item.id %></td>
+                        <td><%= item.itemname %></td>
+                        <td><%= item.stock %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% }) %>
+</div>
